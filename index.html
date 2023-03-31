@@ -12,66 +12,137 @@
 </head>
 
 <body>
-    <div>
-        <img src="./images/kevin-mueller-iBER-hi4DyU-unsplash.jpg" alt="a crow" />
-    </div>
+    <header>
+        <div class="baner">
+            <img id="odin" src="./images/odin-lined.png" alt="odin" />
 
-    <div>
-        <img src="./images/odin-lined.png" alt="odin" />
+            <h1>Odin's Crow</h1>
+        </div>
 
-        <h1>Odin's Crow</h1>
-    </div>
+        <div>
+            <img id="crow" src="./images/kevin-mueller-iBER-hi4DyU-unsplash.jpg" alt="a crow" />
+        </div>
+    </header>
 
-    <div>
-        <p>
-            Here at Odin's Crow we sell the finest crow's oil yes you read that right, in nature crow's Naturally secrete oil onto there wings and this is how they keep that Pristine black coat of feathers so silky smooth and shiny And this natural oil heals all
-            whether that be a malaise, melancholy, moneys and mindfulness this list goes on but couldn't think of any more things staring with
-            <strong>M</strong> but you get the point its a wonder oil it fixes all problems.
-            <sup>This is not snake oil I repeat this is not snake oil that is our
-          sister company <a href="#"><em>snake oil</em></a
-          >.</sup
-        >
-      </p>
-    </div>
+    <main>
+        <section id="sales">
+            <div>
+                <p>
+                    Here at Odin's Crow we sell the finest crow's oil yes you read that right, in nature crow's Naturally secrete oil onto there wings and this is how they keep that Pristine black coat of feathers so silky smooth and shiny And this natural oil heals all
+                    whether that be a malaise, melancholy, moneys and mindfulness this list goes on but couldn't think of any more things staring with
+                    <strong>M</strong> but you get the point its a wonder oil it fixes all problems.
+                    <sup>This is not snake oil I repeat this is not snake oil that is our
+              sister company <a href="#"><em>snake oil</em></a
+              >.</sup
+            >
+          </p>
+        </div>
 
-    <h2>Don't miss out FOMO kills!</h2>
+        <h2>Don't miss out FOMO kills!</h2>
+      </section>
 
-    <form>
-      <div>
-        <input id="name" type="text" />
-        <label for="name">First Name</label>
+      <section id="form">
+        <form id="sign-upform" class="form">
+          <div>
+            <input
+              name="name"
+              id="name"
+              placeholder="First Name *"
+              type="text"
+              value=""
+              maxlength="100"
+              required
+            />
+            <label for="name">First Name</label>
+          </div>
 
-        <input id="surname" type="text" />
-        <label for="surname">Last Name</label>
+          <div class="form-surname">
+            <input
+              name="surname"
+              id="surname"
+              placeholder="Last Name *"
+              type="text"
+              value=""
+              maxlength="100"
+              required
+            />
+            <label for="surname">Last Name</label>
+          </div>
 
-        <input id="email" type="email" />
-        <label for="email">Email</label>
+          <div class="form-email">
+            <input
+              name="email"
+              id="email"
+              placeholder="Email *"
+              type="email"
+              value=""
+              maxlength="100"
+              required
+            />
+            <label for="email">Email</label>
+          </div>
 
-        <input id="phone" type="tel" />
-        <label for="phone">Phone Number</label>
+          <div class="form-phone">
+            <input
+              name="phone"
+              id="phone"
+              placeholder="Phone Number *"
+              type="tel"
+              value=""
+              maxlength="100"
+              required
+            />
+            <label for="phone">Phone Number</label>
+          </div>
 
-        <input id="password" type="password" />
-        <label for="password">Password</label>
+          <div class="form-password">
+            <input
+              name="password"
+              id="password"
+              placeholder="Password *"
+              type="password"
+              value=""
+              maxlength="100"
+              required
+            />
+            <label for="password">Password</label>
+          </div>
 
-        <input id="confirm-password" type="password" />
-        <label for="confirm-password">Confirm Password</label>
+          <div class="form-confirm-password">
+            <input
+              name="confirm-password"
+              id="confirm-password"
+              placeholder="Confirm Password *"
+              type="password"
+              value=""
+              maxlength="100"
+              required
+            />
+            <label for="confirm-password">Confirm Password</label>
+          </div>
+          <div class="form-submit">
+            <input
+              name="submit"
+              type="submit"
+              id="submit"
+              value="Join the hype now!"
+            />
+          </div>
+        </form>
+      </section>
 
-        <input
-          name="submit"
-          type="submit"
-          id="submit"
-          value="Join the hype now!"
-        />
-      </div>
-    </form>
+      <section id="bottom">
+        <div>
+          <p>
+            If you have already seen the light. <a href="#">Log in here.</a>
+          </p>
 
-    <div>
-      <p>If you have already seen the light.<a href="#">Log in here </a></p>
-
-      <p>
-        Shout-out to <a href="https://icons8.com/">icons8</a> for the icons and
-        <a href="https://unsplash.com/">unsplash</a> for the pics
-      </p>
-    </div>
+          <p>
+            Shout-out to <a href="https://icons8.com/">icons8</a> for the icons
+            and <a href="https://unsplash.com/">unsplash</a> for the pics
+          </p>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
