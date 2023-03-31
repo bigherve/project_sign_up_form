@@ -1,3 +1,9 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 html {
     font-size: 15px;
 }
@@ -26,6 +32,188 @@ img#odin {
     align-items: center;
 }
 
+button,
+input {
+    margin: 0;
+    max-width: 100%;
+    vertical-align: baseline;
+}
+
+input {
+    outline: none;
+}
+
+input:focus {
+    outline: 0;
+}
+
+#sign-upform {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+#sign-upform>[class^='form'],
+#sign-upform>.form-submit {
+    min-height: 1px;
+    padding: 15px;
+    width: 100%;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+#sign-upform input[type='text'],
+#sign-upform input[type='email'],
+#sign-upform input[type='tel'],
+#sign-upform input[type='password'] {
+    background: #fff;
+    border: 1px solid #d8d8d8;
+    padding: 15px 10px 12px;
+    font-size: 1rem;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='tel'],
+input[type='password'] {
+    background: #fff;
+    padding: 15px 10px 12px;
+    font-size: 1rem;
+    width: 50%;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+input[type='text']:focus,
+input[type='email']:focus,
+input[type='tel']:focus,
+input[type='password']:focus {
+    background: #fff;
+}
+
+#sign-upform label {
+    padding: 5px 0;
+    font-size: 0.8em;
+    display: none;
+    top: 15px;
+    left: 26px;
+    color: #8bc34a;
+}
+
+#sign-upform input:focus+label,
+#sign-upform input[required]:valid+label,
+#sign-upform input:not(:placeholder-shown)+label,
+#sign-upform textarea:focus+label,
+#sign-upform textarea:valid+label,
+#sign-upform textarea:not(:placeholder-shown)+label {
+    display: block;
+}
+
+#sign-upform input:invalid,
+#sign-upform textarea:invalid {
+    border: 1px solid #b92326;
+    background-color: rgba(185, 35, 38, 0.25);
+}
+
+#sign-upform input:focus:invalid,
+#sign-upform textarea:focus:invalid {
+    background-color: transparent;
+    border: 1px solid #b92326;
+}
+
+#sign-upform input:invalid+label,
+#sign-upform textarea:invalid+label {
+    color: #b92326;
+}
+
+#sign-upform input:invalid+label,
+#sign-upform textarea:invalid+label {
+    color: #b92326;
+}
+
+#sign-upform input:focus:invalid+label:after,
+#sign-upform textarea:focus:invalid+label:after {
+    content: ' (' attr(data-help) ')';
+    animation: silo-help 100s;
+}
+
+#sign-upform input:invalid+label:after,
+#sign-upform textarea:invalid+label:after {
+    content: ' (' attr(data-help) ')';
+}
+
+#sign-upform input:valid,
+#sign-upform textarea:valid {
+    border: 1px solid #8bc34a;
+    background-color: rgba(139, 195, 74, 0.25);
+}
+
+#sign-upform input:focus:valid,
+#sign-upform textarea:focus:valid {
+    border: 1px solid #8bc34a;
+    background-color: transparent;
+}
+
+#sign-upform input:valid+label,
+#sign-upform textarea:valid+label {
+    color: #8bc34a;
+}
+
+#sign-upform input:placeholder-shown,
+#sign-upform textarea:placeholder-shown {
+    background-color: transparent;
+    border: 1px solid #d8d8d8;
+}
+
+#sign-upform input::placeholder,
+#sign-upform textarea::placeholder {
+    color: #d8d8d8;
+}
+
+#sign-upform input::-webkit-input-placeholder,
+#sign-upform textarea::-webkit-input-placeholder {
+    color: #d8d8d8;
+}
+
+#sign-upform input:-ms-input-placeholder,
+#sign-upform textarea:-ms-input-placeholder {
+    color: #d8d8d8;
+}
+
+#sign-upform input::-moz-placeholder,
+#sign-upform textarea::-moz-placeholder {
+    color: #d8d8d8;
+}
+
+#sign-upform input:focus::placeholder,
+#sign-upform textarea:focus::placeholder {
+    color: transparent;
+}
+
+#sign-upform input:focus::-webkit-input-placeholder,
+#sign-upform textarea:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+#sign-upform input:focus:-ms-input-placeholder,
+#sign-upform textarea:focus:-ms-input-placeholder {
+    color: transparent;
+}
+
+#sign-upform input:focus::-moz-placeholder,
+#sign-upform textarea:focus::-moz-placeholder {
+    color: transparent;
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -34,7 +222,7 @@ main {
 
 section#sales {
     background: #f0f0f0;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 section#form {
