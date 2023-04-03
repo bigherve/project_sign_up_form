@@ -33,7 +33,9 @@ img#odin {
 }
 
 button,
-input {
+input,
+select {
+    font-size: 100%;
     margin: 0;
     max-width: 100%;
     vertical-align: baseline;
@@ -59,6 +61,7 @@ input:focus {
 
 #sign-upform>[class^='form'],
 #sign-upform>.form-submit {
+    position: relative;
     min-height: 1px;
     padding: 15px;
     width: 100%;
@@ -67,6 +70,21 @@ input:focus {
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     max-width: 100%;
+}
+
+@media (min-width: 600px) {
+    #sign-upform>.form-name,
+    #sign-upform>.form-surname,
+    #sign-upform>.form-email,
+    #sign-upform>.form-password,
+    #sign-upform>.form-phone,
+    #sign-upform>.form-confirm-password {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 50%;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
 }
 
 #sign-upform input[type='text'],
@@ -84,9 +102,9 @@ input[type='email'],
 input[type='tel'],
 input[type='password'] {
     background: #fff;
-    padding: 15px 10px 12px;
+    padding: 22px 10px 12px;
     font-size: 1rem;
-    width: 50%;
+    width: 100%;
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
@@ -100,43 +118,127 @@ input[type='password']:focus {
     background: #fff;
 }
 
+@-webkit-keyframes silo-fade {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-1.4em);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+}
+
+@-moz-keyframes silo-fade {
+    0% {
+        opacity: 0;
+        -moz-transform: translateY(-1.4em);
+    }
+    100% {
+        opacity: 1;
+        -moz-transform: translateY(0);
+    }
+}
+
+@keyframes silo-fade {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-1.4em);
+        -moz-transform: translateY(-1.4em);
+        -ms-transform: translateY(-1.4em);
+        -o-transform: translateY(-1.4em);
+        transform: translateY(-1.4em);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes silo-help {
+    0% {
+        opacity: 0;
+    }
+    4% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes silo-help {
+    0% {
+        opacity: 0;
+    }
+    4% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes silo-help {
+    0% {
+        opacity: 0;
+    }
+    4% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 #sign-upform label {
     padding: 5px 0;
     font-size: 0.8em;
     display: none;
+    position: absolute;
     top: 15px;
     left: 26px;
     color: #8bc34a;
+    -webkit-animation: silo-fade 0.2s;
+    -moz-animation: silo-fade 0.2s;
+    animation: silo-fade 0.2s;
+    max-width: 80%;
 }
 
 #sign-upform input:focus+label,
 #sign-upform input[required]:valid+label,
-#sign-upform input:not(:placeholder-shown)+label,
-#sign-upform textarea:focus+label,
-#sign-upform textarea:valid+label,
-#sign-upform textarea:not(:placeholder-shown)+label {
+#sign-upform input:not(:placeholder-shown)+label {
     display: block;
 }
 
-#sign-upform input:invalid,
-#sign-upform textarea:invalid {
+#sign-upform input:invalid {
     border: 1px solid #b92326;
     background-color: rgba(185, 35, 38, 0.25);
 }
 
-#sign-upform input:focus:invalid,
-#sign-upform textarea:focus:invalid {
+#sign-upform input:focus:invalid {
     background-color: transparent;
     border: 1px solid #b92326;
 }
 
-#sign-upform input:invalid+label,
-#sign-upform textarea:invalid+label {
+#sign-upform input:invalid+label {
     color: #b92326;
 }
 
-#sign-upform input:invalid+label,
-#sign-upform textarea:invalid+label {
+#sign-upform input:invalid+label {
     color: #b92326;
 }
 
@@ -146,72 +248,77 @@ input[type='password']:focus {
     animation: silo-help 100s;
 }
 
-#sign-upform input:invalid+label:after,
-#sign-upform textarea:invalid+label:after {
+#sign-upform input:invalid+label:after {
     content: ' (' attr(data-help) ')';
 }
 
-#sign-upform input:valid,
-#sign-upform textarea:valid {
+#sign-upform input:valid {
     border: 1px solid #8bc34a;
     background-color: rgba(139, 195, 74, 0.25);
 }
 
-#sign-upform input:focus:valid,
-#sign-upform textarea:focus:valid {
+#sign-upform input:focus:valid {
     border: 1px solid #8bc34a;
     background-color: transparent;
 }
 
-#sign-upform input:valid+label,
-#sign-upform textarea:valid+label {
+#sign-upform input:valid+label {
     color: #8bc34a;
 }
 
-#sign-upform input:placeholder-shown,
-#sign-upform textarea:placeholder-shown {
+#sign-upform input:placeholder-shown {
     background-color: transparent;
-    border: 1px solid #d8d8d8;
+    border: 1px solid #000;
 }
 
-#sign-upform input::placeholder,
-#sign-upform textarea::placeholder {
-    color: #d8d8d8;
+#sign-upform input::placeholder {
+    color: #000;
 }
 
-#sign-upform input::-webkit-input-placeholder,
-#sign-upform textarea::-webkit-input-placeholder {
-    color: #d8d8d8;
+#sign-upform input::-webkit-input-placeholder {
+    color: #000;
 }
 
-#sign-upform input:-ms-input-placeholder,
-#sign-upform textarea:-ms-input-placeholder {
-    color: #d8d8d8;
+#sign-upform input:-ms-input-placeholder {
+    color: #000;
 }
 
-#sign-upform input::-moz-placeholder,
-#sign-upform textarea::-moz-placeholder {
-    color: #d8d8d8;
+#sign-upform input::-moz-placeholder {
+    color: #000;
 }
 
-#sign-upform input:focus::placeholder,
-#sign-upform textarea:focus::placeholder {
+#sign-upform input:focus::placeholder {
     color: transparent;
 }
 
-#sign-upform input:focus::-webkit-input-placeholder,
-#sign-upform textarea:focus::-webkit-input-placeholder {
+#sign-upform input:focus::-webkit-input-placeholder {
     color: transparent;
 }
 
-#sign-upform input:focus:-ms-input-placeholder,
-#sign-upform textarea:focus:-ms-input-placeholder {
+#sign-upform input:focus:-ms-input-placeholder {
     color: transparent;
 }
 
-#sign-upform input:focus::-moz-placeholder,
-#sign-upform textarea:focus::-moz-placeholder {
+#sign-upform input:focus::-moz-placeholder {
     color: transparent;
+}
+
+#sign-upform input[type='submit'] {
+    background-color: transparent;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    margin: 15px auto;
+    vertical-align: middle;
+    display: block;
+    cursor: pointer;
+}
+
+#sign-upform input[type='submit']:hover {
+    background-color: rgba(139, 195, 74, 0.25);
+    color: #8bc34a;
+    border: 1px solid #8bc34a;
 }
 
 main {
