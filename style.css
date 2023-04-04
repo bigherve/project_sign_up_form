@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Norse;
+    src: url(./fonts/Norse-Bold.otf);
+}
+
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -10,6 +15,7 @@ html {
 
 body {
     display: flex;
+    background: #000;
     margin: 0;
     padding: 0;
 }
@@ -30,7 +36,8 @@ img#odin {
 }
 
 .baner {
-    color: #fff;
+    color: #596d48;
+    font-family: Norse;
     font-size: 1.5rem;
     background: rgba(0, 0, 0, 0.7);
     display: flex;
@@ -97,10 +104,9 @@ input:focus {
 #sign-upform input[type='email'],
 #sign-upform input[type='tel'],
 #sign-upform input[type='password'] {
-    background: #fff;
-    border: 1px solid #d8d8d8;
     padding: 15px 10px 12px;
     font-size: 1rem;
+    color: #fff;
 }
 
 input[type='text'],
@@ -115,13 +121,6 @@ input[type='password'] {
     -moz-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
-}
-
-input[type='text']:focus,
-input[type='email']:focus,
-input[type='tel']:focus,
-input[type='password']:focus {
-    background: #fff;
 }
 
 @-webkit-keyframes silo-fade {
@@ -218,6 +217,7 @@ input[type='password']:focus {
     top: 15px;
     left: 26px;
     color: #8bc34a;
+    color: #fff;
     -webkit-animation: silo-fade 0.2s;
     -moz-animation: silo-fade 0.2s;
     animation: silo-fade 0.2s;
@@ -274,23 +274,24 @@ input[type='password']:focus {
 
 #sign-upform input:placeholder-shown {
     background-color: transparent;
-    border: 1px solid #000;
+    border: 1px solid #fff;
+    color: #fff;
 }
 
 #sign-upform input::placeholder {
-    color: #000;
+    color: #fff;
 }
 
 #sign-upform input::-webkit-input-placeholder {
-    color: #000;
+    color: #fff;
 }
 
 #sign-upform input:-ms-input-placeholder {
-    color: #000;
+    color: #fff;
 }
 
 #sign-upform input::-moz-placeholder {
-    color: #000;
+    color: #fff;
 }
 
 #sign-upform input:focus::placeholder {
@@ -310,7 +311,7 @@ input[type='password']:focus {
 }
 
 #sign-upform input[type='submit'] {
-    background-color: transparent;
+    background-color: #596d48;
     border: 1px solid #000;
     border-radius: 5px;
     padding: 10px;
@@ -333,16 +334,23 @@ main {
 
 section#sales {
     font-size: 1.6rem;
-    box-shadow: 0px 5px 5px rgba(71, 71, 71, 0.2);
+    background: #000;
+    padding: 5px;
+    margin: 2px;
+    color: #fff;
 }
 
 section#form {
-    box-shadow: 0px 5px 5px rgba(71, 71, 71, 0.2);
+    padding-top: 20px;
+    background: #000;
 }
 
 section#bottom {
     font-size: 1rem;
-    padding: 2px;
+    padding: 5px;
+    margin: 2px;
+    background: #000;
+    color: #fff;
 }
 
 h2 {
@@ -352,4 +360,10 @@ h2 {
 
 a {
     text-decoration: none;
+    color: #596d48;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #596d48;
 }
